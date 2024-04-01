@@ -3,7 +3,7 @@
         {
             "name":"Alice",
             "gender": 1,
-            "postition": "monitor",
+            "position": "monitor",
             "salary": 10000,
             "doj": "1990-01-01",
             "date":["1990-01-01", "2010-01-09"],

@@ -31,7 +31,7 @@
                 </el-form>
                 <el-divider></el-divider>
                 <!-- table -->
-                <el-table :data="tableData" style="width: 100%">
+                <el-table :data="searchForm" style="width: 100%">
                     <el-table-column prop="name" label="Name" width="180">
                     </el-table-column>
                     <el-table-column prop="image" label="Photo" width="180">
@@ -53,11 +53,13 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            tableData: [],
             searchForm: {
                 name: '',
                 gender: '',
-                doj: [],
+                position: '',
+                doj: '',
+                date: [],
+                doe: ''
             }
         }
 
@@ -69,7 +71,7 @@ export default {
     },
     mounted() {
         axios.get("https://raw.githubusercontent.com/burgger/htmlStudy/main/Heima/Vue/vue-project/public/data.json").then(res => {
-            this.tableData = res.data.data;
+            this.searchForm = res.data.data;
         })
     }
 }
