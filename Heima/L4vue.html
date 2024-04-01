@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="vue.js"></script>
+    <!-- view -->
+    <div id="app">
+        <!-- vue command -->
+        <!-- start with "v-" -->
+
+        <!-- v-bind 绑定标签的属性 简写: -->
+        <!-- <a v-bind:href="url">绑定超链接的属性为Vue中声明的</a> -->
+        <a :href="url">绑定超链接的属性为Vue中声明的</a>
+        <br>
+        <!-- v-model 绑定表单元素的值,双向绑定 将表单元素同时反向绑定给Vue中声明变量值 -->
+        <input type="text" v-model="url">
+        修改上方url
+        <br>
+        <!-- v-on 为标签绑定事件 简写@ -->
+        <!-- <button v-on:click="show()">点我调用show()方法</button> -->
+        <button @click="show()">点我调用show()</button>
+        <br>
+        <!-- v-if,v-else-if,v-else 条件性渲染元素 true时渲染 -->
+        <div v-if="url === 'http://www.google.com'">url为google</div>
+        <div v-else-if="url === 'http://www.baidu.com'">url为baidu</div>
+        <div v-else>不明url</div>
+        <br>
+        <!-- v-show 根据条件展示元素,不管怎样都渲染但不一定展示,通过改变display参数实现 -->
+        <div v-show="url === 'http://www.google.com'">url为google</div>
+        <br>
+        <!-- v-for 循环渲染元素 -->
+        <span v-for="items in arr">{{items}}</span><br>
+        <!-- items 是新声明的临时对象,遍历时会被 in 后面的对象赋值 -->
+        <span v-for="(items,index) in arr">{{(items,index)}}</span>
+        <br>
+        <!-- vue的生命周期 -->
+        vue的生命周期<br>
+        <img src="./lifecycle_zh-CN.FtDDVyNA.png" height="800">
+    </div>
+    <!-- view model -->
+    <script>
+        new Vue({
+            el: '#app', // vue 接管区域 id = app
+            // 定义变量区
+            data: {
+                url: "http://www.google.com",
+                arr: [1,2,3,4,5]
+            },
+            // 定义方法区
+            methods: {
+                show: function(){
+                    alert('show()方法被调用了');
+                }
+            },
+            // vue的生命周期
+            mounted(){
+                console.log('vue实例被创建了');
+                alert('vue实例被创建了');
+            }
+            // 该方法在vue进行到mounted生命周期时被自动调用
+
+        })
+    </script>
+    
+    
+    
+    
+</body>
+</html>

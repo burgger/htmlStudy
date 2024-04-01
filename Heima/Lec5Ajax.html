@@ -1,0 +1,46 @@
+<!-- Asynchronus JavaScript And XML -->
+<!-- 在不重新加载整个页面的情况下与服务器交换数据部分更新网页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./axios.min.js"></script>
+</head>
+<body>
+
+    <input type="button" value="get" onclick="get()">
+    <input type="button" value="post" onclick="post()">
+
+    <script>
+    function get(){
+        //通过axios发送get请求
+        axios({
+            method: "get",
+            url: "file:///d%3A/CODE/HTMLCode/eg.json"
+        }).then(result=>{
+            console.log(result.data);
+        })
+        //简化书写
+        axios.get("file:///d%3A/CODE/HTMLCode/eg.json").then(result=>{console.log(result.data)});
+    }
+    
+    function post(){
+        //通过axios发送post请求
+        axios({
+            method: "post",
+            url: "http://yapi.smart-xwork.cn/mocck/169327/emp/deleteById",
+            data: "id=1"
+        }).then(result=>{
+            console.log(result.data);
+        })
+        //简化书写
+        axios.post("http://yapi.smart-xwork.cn/mocck/169327/emp/deleteById","id=1").then(result=>{console.log(result.data)});
+    }
+    
+
+    </script>
+    
+</body>
+</html>

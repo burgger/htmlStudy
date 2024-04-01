@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表,表格,表单</title>
+    <h1>列表,表格,和表单</h1>
+</head>
+<hr>
+
+<body>
+    <h2>列表</h2>
+    内容布局排列整齐的区域 <br>
+    <h3>无序列表</h3>
+    <ul>无序列表不关注顺序
+        <li>第一项</li>
+        <li>第二项</li>
+        <li><a href="http://google.com" target="_blank">google</a></li>
+    </ul>
+    ul中只能有li标签 li中可以有别的标签
+    <h3>有序列表</h3>
+    <ol>有序列表关注顺序
+        <li>第一项</li>
+        <li>第二项</li>
+        <li><a href="http://google.com" target="_blank">google</a></li>
+    </ol>
+    <h3>自定义列表</h3>
+    <dl>自定义列表
+        <dt>第一项</dt>
+        <dd>第一项的解释</dd>
+        <dt>第二项</dt>
+        <dd>第二项的解释</dd>
+        <dd><a href="https://google.com">feedback</a></dd>
+    </dl>
+
+    <h2>表格</h2>
+    table嵌套tr, tr嵌套td,th
+    <!-- boder 用来控制表格边框 -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>表头</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>1内容</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>总结</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+    </table>
+    <!-- thead tbody tfoot 仅对浏览器有用,看不到-->
+    合并单元格
+    <!-- 保留最左最上,是单元格的参数,手动删除后续重复单元格 -->
+    <!-- rowspan="行" colspan="列" -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>表头</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>内容</td>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>总结</td>
+            <!-- <td>1</td> -->
+            <td>2</td>
+            <td>3</td>
+    </table>
+
+    <h2>表单</h2>
+    收集信息用
+    <h3>input</h3>
+    依靠type属性来决定输入类型 <br>
+    <!-- 单行 -->
+    文本框:<input type="text" placeholder="提示文字">
+    <br>
+    <!-- 单行且隐藏 -->
+    密码框:<input type="password" placeholder="password">
+    <br>
+    <!-- 同name只能选一个 -->
+    <!-- 使用lable 绑定小圈和文字增大点击范围减少误触 -->
+    <!-- lable 内内容视为整体 -->
+    单选框:<input type="radio" name="gender" id="man"> <label for="man">male</label>
+    <label><input type="radio" name="gender">female</label>
+    <input type="radio" name="gender" checked> 保密
+    <!-- checked 默认选中 -->
+    <br>
+    <!-- 多选框 -->
+    复选框:<input type="checkbox" name="爱好">篮球
+    <input type="checkbox" name="爱好">足球
+    <input type="checkbox" name="爱好" checked>其他
+    <br>
+    <!-- 多文件上传加multiple -->
+    上传按钮:<input type="file" multiple>
+    <br>
+    <!-- 默认显示第一个,加selected更改默认选中 -->
+    下拉菜单:<select>
+        <option>NY</option>
+        <option>LA</option>
+        <option selected>SF</option>
+    </select>
+    <br>
+    <!-- 多行文本框 -->
+    <!-- 右下角可拖拽一般禁用 -->
+    文本域: <br>
+    <textarea placeholder="提示文字">默认填写文字</textarea>
+    <br>
+    <!-- 按钮用type分效果,默认submit -->
+    提交按钮:<button type="submit">submit</button>
+    重置按钮:<button type="reset">reset</button>
+    普通按钮:<button type="button"></button>
+    <br>
+    <br>
+    <br>
+    form来确定整个表单区域
+    <form>
+        文本框:<input type="text" placeholder="提示文字">
+        <br>
+        密码框:<input type="password" placeholder="password">
+        <br>
+        <button type="reset">reset</button>
+        <button type="submit">submit</button>
+        <!-- 确定button作用范围 -->
+    </form>
+    <br>
+    <br>
+    <br>
+    <!-- 布局标签 -->
+    布局标签
+    <div>大盒子独占一整行</div>
+    <div>大盒子独占一整行</div>
+    <span>小盒子占自己的一小块</span>
+    <span>小盒子占自己的一小块</span>
+    <br>
+    <br>
+    <br>
+    <!-- 字符实体,显示预留字符如"<>" -->
+    字符实体
+    <!-- 代码中空格浏览器只识别一个 -->
+    &lt;(&amp;lt;) &nbsp;&gt;(&amp;gt;) &nbsp; &amp;(&amp;amp;) &nbsp;&nbsp;(&amp;nbsp;:空格)
+
+
+
+</body>
+
+</html>

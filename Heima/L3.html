@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conbined JS</title>
+</head>
+<body>
+    <!-- Script tag can apear anytime anywhere -->
+    <!-- alert 弹窗 -->
+    <script>alert('Hello JS')</script>
+    <script src="./hellojs.js"></script>
+    <script src="./JSlec.js"></script>
+
+    <h1>JS学习</h1>
+    <h2>JS的基本语法</h2>
+    <img id="img1" src="屏幕截图 2024-03-11 140948.png"> <br><br>
+    <input type="checkbox" name="hobby"> 篮球
+    <input type="checkbox" name="hobby"> 足球
+    <input type="checkbox" name="hobby"> 乒乓球
+    <!-- HTML事件监听 -->
+
+    <!-- 1.通过标签属性绑定函数 -->
+    <button onclick="alert('Hello JS')">点我</button>
+    <button onclick="changeImg()">换图</button>
+    <script>function changeImg(){
+        var img = document.getElementById('img1');
+        img.src = '屏幕截图 2024-03-11 141013.png';
+    }</script>
+    <!-- onclick 后跟"函数" 代表元素点击后执行 -->
+
+    <!-- 2.通过JS代码绑定函数 -->
+    <input type="button" name="study" id="study1">
+    <script>
+        var study1 = document.getElementById('study1');
+        study1.onclick = function(){
+            alert('Hello JS');
+        }
+    </script>
+</body>
+</html>

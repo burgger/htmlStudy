@@ -1,0 +1,1 @@
+alert('hello js in js file in folder Heima')

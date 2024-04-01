@@ -1,0 +1,12 @@
+{
+    "data":[
+        {
+            "name":"Alice",
+            "gender": 1,
+            "postition": "monitor",
+            "salary": 10000,
+            "dob": "1990-01-01"
+
+        }
+    ]
+}
