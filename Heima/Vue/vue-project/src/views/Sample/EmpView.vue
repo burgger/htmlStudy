@@ -36,7 +36,7 @@
                     </el-table-column>
                     <el-table-column prop="image" label="Photo" width="180">
                         <template slot-scope="scope">
-                            <img :src="scope.row.image" style="width: 100px; height: 100px" />
+                            <img :src="scope.row.img" style="width: 100px; height: 100px" />
                         </template>
                     </el-table-column>
                     <el-table-column prop="gender" label="Gender" width="180">
@@ -55,10 +55,12 @@
 </template>
 
 <script>
+//npm安装并导入axios
 import axios from 'axios';
 export default {
     data() {
         return {
+            //用来读取data.json中的数据
             searchForm: {
                 name: '',
                 gender: '',
@@ -75,6 +77,7 @@ export default {
             console.log('submit!');
         }
     },
+    //使用vue生命周期钩子函数mounted()，在页面加载时调用axios.get的数据并赋值给searchForm
     mounted() {
         axios.get("https://raw.githubusercontent.com/burgger/htmlStudy/main/Heima/Vue/vue-project/public/data.json").then(res => {
             this.searchForm = res.data.data;

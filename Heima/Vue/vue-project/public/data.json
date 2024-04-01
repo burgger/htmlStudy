@@ -3,13 +3,32 @@
         {
             "name":"Alice",
             "gender": 1,
-            "position": "monitor",
+            "position": "Sender",
             "salary": 10000,
             "doj": "1990-01-01",
             "date":["1990-01-01", "2010-01-09"],
             "doe": "2010-01-09",
             "img":"https://github.com/burgger/htmlStudy/blob/main/Heima/Vue/vue-project/public/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-03-25%20152200.png?raw=true"
-
+        },
+        {
+            "name":"Bob",
+            "gender": 0,
+            "position": "Receiver",
+            "salary": 10000,
+            "doj": "1990-01-01",
+            "date":["1990-01-01", "2010-01-09"],
+            "doe": "2010-01-09",
+            "img":"https://github.com/burgger/htmlStudy/blob/main/Heima/Vue/vue-project/public/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-03-25%20152200.png?raw=true"
+        },
+        {
+            "name":"Cathy",
+            "gender": 1,
+            "position": "Attacker",
+            "salary": 10000,
+            "doj": "1990-01-01",
+            "date":["1990-01-01", "2010-01-09"],
+            "doe": "2010-01-09",
+            "img":"https://github.com/burgger/htmlStudy/blob/main/Heima/Vue/vue-project/public/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-03-25%20152200.png?raw=true"
         }
     ]
 }
