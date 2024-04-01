@@ -57,7 +57,7 @@ export default {
             searchForm: {
                 name: '',
                 gender: '',
-                date: [],
+                doj: [],
             }
         }
 
@@ -68,7 +68,7 @@ export default {
         }
     },
     mounted() {
-        axios.get("D:\CODE\HTMLCode\Heima\Vue\vue-project\src\assets\data.json").then(res => {
+        axios.get("https://raw.githubusercontent.com/burgger/htmlStudy/main/Heima/Vue/vue-project/public/data.json").then(res => {
             this.tableData = res.data.data;
         })
     }
