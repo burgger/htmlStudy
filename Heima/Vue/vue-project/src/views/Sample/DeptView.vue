@@ -34,8 +34,8 @@
                 </el-form>
                 <el-divider></el-divider>
                 <!-- table -->
-                <el-table :data="searchForm" style="width: 100%">
-                    <el-table-column prop="name" label="Name" width="180">
+                <!-- <el-table :data="searchForm" style="width: 100%">
+                    <el-table-column prop="name" label="AHAHAHAAH" width="180">
                     </el-table-column>
                     <el-table-column prop="image" label="Photo" width="180">
                         <template slot-scope="scope">
@@ -44,14 +44,14 @@
                     </el-table-column>
                     <el-table-column prop="gender" label="Gender" width="180">
                         <template slot-scope="scope">
-                            {{ scope.row.gender === 0 ? "male" : "female" }}
+                        {{  scope.row.gender === 0 ? "male":"female"}} 
                         </template>
                     </el-table-column>
                     <el-table-column prop="position" label="Position" width="180">
                     </el-table-column>
                     <el-table-column prop="doj" label="Joined Date">
                     </el-table-column>
-                </el-table>
+                </el-table> -->
             </el-main>
         </el-container>
     </el-container>

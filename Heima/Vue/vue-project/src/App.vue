@@ -2,7 +2,9 @@
 <!-- template中定义html代码 -->
   <div>
     <!-- <element-view></element-view> -->
-  <emp-view></emp-view>
+  <!-- <emp-view></emp-view> -->
+  <router-view></router-view>
+  <!-- 通过router-view动态选择展示组件,依据router/index.js -->
   </div>
 </template>
 
@@ -20,9 +22,10 @@
     
 //   }
 // }
-import EmpView from './views/Sample/EmpView.vue'
+// import EmpView from './views/Sample/EmpView.vue'
+
 export default{
-  components: { EmpView },
+  // components: { EmpView },
   data(){
     return{
       message: 'Hello Vue!'
