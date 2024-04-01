@@ -35,8 +35,14 @@
                     <el-table-column prop="name" label="Name" width="180">
                     </el-table-column>
                     <el-table-column prop="image" label="Photo" width="180">
+                        <template slot-scope="scope">
+                            <img :src="scope.row.image" style="width: 100px; height: 100px" />
+                        </template>
                     </el-table-column>
                     <el-table-column prop="gender" label="Gender" width="180">
+                        <template slot-scope="scope">
+                        {{  scope.row.gender === 0 ? "male":"female"}} 
+                        </template>
                     </el-table-column>
                     <el-table-column prop="position" label="Position" width="180">
                     </el-table-column>
